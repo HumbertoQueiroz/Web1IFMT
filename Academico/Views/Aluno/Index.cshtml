@@ -1,0 +1,47 @@
+﻿@model List<Academico.Models.Aluno>
+@{
+    ViewData["Title"] = "Aluno";
+}
+
+<div class="text-center">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <img src="~/img/90359980.png" class="img-fluid rounded" alt="Descrição">
+            </div>
+            <div class="col-md-8 text-start">
+                @foreach (var aluno in Model)
+                {
+                    <div class=" d-flex  flex-row ">
+                        <p class="col-3 text-start">Nome: </p>
+                        <p class="">@aluno.nome</p>
+                    </div>
+                    <div class=" d-flex  flex-row">
+                        <p class="col-3 text-start">Data Nasc.: </p>
+                        <p class="">@aluno.dataNascimento.ToString("dd/MM/yyyy")</p>
+                    </div>
+                    <div class=" d-flex  flex-row">
+                        <p class="col-3 text-start">Matrícula: </p>
+                        <p class="">@aluno.matricula</p>
+                    </div>
+                    <div class=" d-flex  flex-row">
+                        <p class="col-3 text-start">CPF: </p>
+                        <p class="">@aluno.cpf</p>
+                    </div>
+                    <div class="border border-1 my-3 w-100"></div>
+                }
+            </div>
+            <div class="border border-1 my-5 w-100"></div>
+            <div class="text-start">
+
+            <h2 >Disciplinas Cursadas</h2>
+            <ul>
+                <li>Matemática</li>
+                <li>Português</li>
+                <li>História</li>
+            </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
